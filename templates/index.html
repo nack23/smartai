@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartAI Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">🤖 SmartAI - Math Solver</div>
 
+    <div class="chat-box" id="chat-box">
+      <div class="bot-msg">Hi! Upload a math image or type your question below 👇</div>
+    </div>
+
+    <form method="POST" action="/ask" enctype="multipart/form-data" class="chat-form">
+      <input type="file" name="image" id="image-upload">
+      <input type="text" name="question" placeholder="Type your math question..." required>
+      <button type="submit">➤</button>
+    </form>
+  </div>
+</body>
+</html>
